@@ -14,12 +14,28 @@ const App = () => {
     "?",
     "?"
   ])
-
+  
+ // initial value is random number
+  const [treasureLoc, setTreasureLoc] = useState(Math.floor(Math.random() * board.length))
+  const [bombLoc, setBombLoc] = useState(Math.floor(Math.random() * board.length))
+  
+  console.log("Treasure:",treasureLoc)
+  console.log("Bomb:",bombLoc)
+  
+  
   const handleGamePlay = (index) => {
     // alert(index)
     let updatedBoard = [...board] // created copy of state board
-    updatedBoard[index] = "🌴" // emoji: cmd+ctrl+spc
+    if(index === treasureLoc) {
+      updatedBoard[index] = "💰" // emoji: cmd+ctrl+spc
     setBoard(updatedBoard)
+    } else if(index === bombLoc) {
+      updatedBoard[index] = "💣" 
+    setBoard(updatedBoard)
+    } else {
+      updatedBoard[index] = "🌴" 
+      setBoard(updatedBoard)
+    }
   }
 
   return (
