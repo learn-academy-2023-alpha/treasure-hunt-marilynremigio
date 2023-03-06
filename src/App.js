@@ -18,7 +18,16 @@ const App = () => {
   return (
     <>
       <h1>Treasure Hunt Game</h1>
-      <Square />
+      <div className="gameboard">
+        {board.map((value,index) => {
+          return (
+            <Square  
+              value={value}
+              key={index}
+            />
+          ) 
+        })}
+      </div>
     </>
   )
 }
