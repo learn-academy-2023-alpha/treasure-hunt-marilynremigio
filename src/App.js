@@ -16,7 +16,10 @@ const App = () => {
   ])
 
   const handleGamePlay = (index) => {
-    alert(index)
+    // alert(index)
+    let updatedBoard = [...board] // created copy of state board
+    updatedBoard[index] = "🌴" // emoji: cmd+ctrl+spc
+    setBoard(updatedBoard)
   }
 
   return (
