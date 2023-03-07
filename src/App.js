@@ -51,6 +51,8 @@ const App = () => {
       "?",
       "?"
     ])
+    setTreasureLoc(Math.floor(Math.random() * board.length))
+    setBombLoc(Math.floor(Math.random() * board.length))
   }
 
   return (
