@@ -14,6 +14,7 @@ const App = () => {
     "?",
     "?"
   ])
+
   
  // initial value is random number
   const [treasureLoc, setTreasureLoc] = useState(Math.floor(Math.random() * board.length))
@@ -38,9 +39,27 @@ const App = () => {
     }
   }
 
+  const restart = () => {
+    setBoard([
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ])
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
+      <div className="button">
+        <button onClick={restart}>Play Again</button>
+      </div>
+      <br></br>
       <div className="gameboard">
         {board.map((value,index) => {
           return (
@@ -53,6 +72,7 @@ const App = () => {
           ) 
         })}
       </div>
+      
     </>
   )
 }

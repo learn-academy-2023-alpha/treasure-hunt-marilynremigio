@@ -34,7 +34,6 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
     - Update state using setBoard method with the modified copied array
 
 
-
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
     Branch: winner-loser
     - Randomize winning box index and store in a state variable
@@ -42,14 +41,12 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
     - Create some conditional logic to check if selected box is the winning box or the losing box when clicking on the box
 
 
-
-
-
-
-
-
-
 - As a user, I can click on a “Play Again” button that will restart the game.
+    Branch: restart-game
+    - Create a div with a button that says 'Play Again' to restart the game. 
+    - add a className attribute to div called "button" to style alignment in CSS 
+    - Set up an onClick on the div
+    - The onClick will trigger a restart function that will set the gameboard back to its initial state
 
 
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
