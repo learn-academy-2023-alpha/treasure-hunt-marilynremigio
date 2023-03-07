@@ -16,3 +16,8 @@ h1 {
   width: 620px;
   margin: 0 auto;
 }
+
+.button {
+  display: flex;
+  justify-content: center;
+}
